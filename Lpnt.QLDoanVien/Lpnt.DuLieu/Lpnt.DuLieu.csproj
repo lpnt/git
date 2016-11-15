@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6A4678E-B0A5-44DB-8196-A800345B87B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lpnt.DuLieu</RootNamespace>
+    <AssemblyName>Lpnt.DuLieu</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v16.1, Version=16.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsDuLieu.cs" />
+    <Compile Include="ModelCode\BaseObject.cs" />
+    <Compile Include="ModelCode\BaseObject.Designer.cs">
+      <DependentUpon>BaseObject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\ChiDoan.cs" />
+    <Compile Include="ModelCode\ChiDoan.Designer.cs">
+      <DependentUpon>ChiDoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\ChucNang.cs" />
+    <Compile Include="ModelCode\ChucNang.Designer.cs">
+      <DependentUpon>ChucNang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\ChucVuDang.cs" />
+    <Compile Include="ModelCode\ChucVuDang.Designer.cs">
+      <DependentUpon>ChucVuDang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\ChucVuDoan.cs" />
+    <Compile Include="ModelCode\ChucVuDoan.Designer.cs">
+      <DependentUpon>ChucVuDoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\DanToc.cs" />
+    <Compile Include="ModelCode\DanToc.Designer.cs">
+      <DependentUpon>DanToc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\DonVi.cs" />
+    <Compile Include="ModelCode\DonVi.Designer.cs">
+      <DependentUpon>DonVi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\HuyenQuan.cs" />
+    <Compile Include="ModelCode\HuyenQuan.Designer.cs">
+      <DependentUpon>HuyenQuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\NgoaiNgu.cs" />
+    <Compile Include="ModelCode\NgoaiNgu.Designer.cs">
+      <DependentUpon>NgoaiNgu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\NguoiDung.cs" />
+    <Compile Include="ModelCode\NguoiDung.Designer.cs">
+      <DependentUpon>NguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\NhanSu.cs" />
+    <Compile Include="ModelCode\NhanSu.Designer.cs">
+      <DependentUpon>NhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\NhomNguoiDung.cs" />
+    <Compile Include="ModelCode\NhomNguoiDung.Designer.cs">
+      <DependentUpon>NhomNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\NienKhoa.cs" />
+    <Compile Include="ModelCode\NienKhoa.Designer.cs">
+      <DependentUpon>NienKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\Param.cs" />
+    <Compile Include="ModelCode\Param.Designer.cs">
+      <DependentUpon>Param.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\PhanQuyen.cs" />
+    <Compile Include="ModelCode\PhanQuyen.Designer.cs">
+      <DependentUpon>PhanQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\TinhThanh.cs" />
+    <Compile Include="ModelCode\TinhThanh.Designer.cs">
+      <DependentUpon>TinhThanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\TonGiao.cs" />
+    <Compile Include="ModelCode\TonGiao.Designer.cs">
+      <DependentUpon>TonGiao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\TrinhDoChuyenMon.cs" />
+    <Compile Include="ModelCode\TrinhDoChuyenMon.Designer.cs">
+      <DependentUpon>TrinhDoChuyenMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\TrinhDoHocVan.cs" />
+    <Compile Include="ModelCode\TrinhDoHocVan.Designer.cs">
+      <DependentUpon>TrinhDoHocVan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\TrinhDoLyLuanChinhTri.cs" />
+    <Compile Include="ModelCode\TrinhDoLyLuanChinhTri.Designer.cs">
+      <DependentUpon>TrinhDoLyLuanChinhTri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\TrinhDoNgoaiNgu.cs" />
+    <Compile Include="ModelCode\TrinhDoNgoaiNgu.Designer.cs">
+      <DependentUpon>TrinhDoNgoaiNgu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\TrinhDoTinHoc.cs" />
+    <Compile Include="ModelCode\TrinhDoTinHoc.Designer.cs">
+      <DependentUpon>TrinhDoTinHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelCode\XaPhuong.cs" />
+    <Compile Include="ModelCode\XaPhuong.Designer.cs">
+      <DependentUpon>XaPhuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Model.xpo" />
+    <None Include="Model.xpo.diagram">
+      <DependentUpon>Model.xpo</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
