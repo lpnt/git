@@ -70,6 +70,12 @@
     <Compile Include="Common\FrmBase.Designer.cs">
       <DependentUpon>FrmBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\FrmBaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\FrmBaseDialog.Designer.cs">
+      <DependentUpon>FrmBaseDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Common\FrmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Common\FrmBase.resx">
       <DependentUpon>FrmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\FrmBaseDialog.resx">
+      <DependentUpon>FrmBaseDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Common\FrmSplash.resx">
       <DependentUpon>FrmSplash.cs</DependentUpon>

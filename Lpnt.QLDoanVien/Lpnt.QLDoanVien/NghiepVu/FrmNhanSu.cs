@@ -23,11 +23,12 @@ namespace Lpnt.QLDoanVien.NghiepVu
 
         protected override void OnNap()
         {
+            Text = string.Format("[{0}] Quản lý nhân sự", clsHeThong.NienKhoaSuDung.TenNienKhoa);
             xpcDonVi.Reload();
             xpcChiDoan.Reload();
             xpcNhanSu.Reload();
 
-            xpcDonVi.Filter = CriteriaOperator.Parse(Constants.FILTER_NIENKHOA_DONVI, HeThong.NienKhoaSuDung.Id);
+            xpcDonVi.Filter = CriteriaOperator.Parse(Constants.FILTER_NIENKHOA_DONVI, clsHeThong.NienKhoaSuDung.Id);
             xpcChiDoan.Filter = CriteriaOperator.Parse("[DonVi.Id] = ?", SearchLookUpEditDonVi.EditValue);
             xpcNhanSu.Filter = CriteriaOperator.Parse("[ChiDoan.Id] = ?", SearchLookUpEditChiDoan.EditValue);
 

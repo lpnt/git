@@ -46,6 +46,7 @@
     <Reference Include="DevExpress.XtraLayout.v16.1, Version=16.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,7 +63,19 @@
     <Compile Include="FrmTrangChu.Designer.cs">
       <DependentUpon>FrmTrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="HeThong.cs" />
+    <Compile Include="clsHeThong.cs" />
+    <Compile Include="HeThong\FrmNienKhoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\FrmNienKhoa.Designer.cs">
+      <DependentUpon>FrmNienKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NghiepVu\FrmChiDoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NghiepVu\FrmChiDoan.Designer.cs">
+      <DependentUpon>FrmChiDoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="NghiepVu\FrmDonVi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +92,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmTrangChu.resx">
       <DependentUpon>FrmTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\FrmNienKhoa.resx">
+      <DependentUpon>FrmNienKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NghiepVu\FrmChiDoan.resx">
+      <DependentUpon>FrmChiDoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NghiepVu\FrmDonVi.resx">
       <DependentUpon>FrmDonVi.cs</DependentUpon>
@@ -125,7 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DanhMuc\" />
-    <Folder Include="HeThong\" />
     <Folder Include="HoTro\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

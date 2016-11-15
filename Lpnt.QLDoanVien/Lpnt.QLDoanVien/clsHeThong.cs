@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lpnt.QLDoanVien
 {
-    public class HeThong
+    public class clsHeThong
     {
         public static NienKhoa NienKhoaSuDung
         {

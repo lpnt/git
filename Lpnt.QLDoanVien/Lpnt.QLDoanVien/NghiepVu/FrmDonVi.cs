@@ -24,8 +24,10 @@ namespace Lpnt.QLDoanVien.NghiepVu
 
         protected override void OnNap()
         {
+            Text = string.Format("[{0}] Quản lý đơn vị", clsHeThong.NienKhoaSuDung.TenNienKhoa);
+
             // Lọc đơn vị theo niên khóa đang sử dụng
-            xpcDonVi.Filter = CriteriaOperator.Parse(Constants.FILTER_NIENKHOA_DONVI, HeThong.NienKhoaSuDung.Id);
+            xpcDonVi.Filter = CriteriaOperator.Parse(Constants.FILTER_NIENKHOA_DONVI, clsHeThong.NienKhoaSuDung.Id);
 
             xpcTinhThanh.Reload();
             xpcHuyenQuan.Reload();
@@ -102,7 +104,7 @@ namespace Lpnt.QLDoanVien.NghiepVu
             var donvi = gvDonVi.GetFocusedRow() as DonVi;
             if (donvi == null) return;
 
-            if (HeThong.NienKhoaSuDung != null) donvi.NienKhoa = xpcNienKhoa.Lookup(HeThong.NienKhoaSuDung.Id) as NienKhoa;
+            if (clsHeThong.NienKhoaSuDung != null) donvi.NienKhoa = xpcNienKhoa.Lookup(clsHeThong.NienKhoaSuDung.Id) as NienKhoa;
         }
 
         private void rslkNienKhoa_QueryPopUp(object sender, CancelEventArgs e)

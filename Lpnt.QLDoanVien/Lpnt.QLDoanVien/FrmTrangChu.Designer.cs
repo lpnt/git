@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTrangChu));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
@@ -47,6 +48,8 @@
             this.btnDoiMatKhau = new DevExpress.XtraBars.BarButtonItem();
             this.btnNhanSu = new DevExpress.XtraBars.BarButtonItem();
             this.btnDonVi = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNhapTuExcel = new DevExpress.XtraBars.BarButtonItem();
+            this.btnChiDoan = new DevExpress.XtraBars.BarButtonItem();
             this.rpHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgGiaoDien = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -57,10 +60,11 @@
             this.rpHoTro = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.RS = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.DM = new DevExpress.XtraBars.Docking2010.DocumentManager();
-            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView();
-            this.IMC = new DevExpress.Utils.ImageCollection();
-            this.btnNhapTuExcel = new DevExpress.XtraBars.BarButtonItem();
+            this.DM = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
+            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.IMC = new DevExpress.Utils.ImageCollection(this.components);
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnNienKhoa = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -89,9 +93,11 @@
             this.btnDoiMatKhau,
             this.btnNhanSu,
             this.btnDonVi,
-            this.btnNhapTuExcel});
+            this.btnNhapTuExcel,
+            this.btnChiDoan,
+            this.btnNienKhoa});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 19;
+            this.ribbon.MaxItemId = 21;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageHeaderItemLinks.Add(this.btnDongTatCaTab);
             this.ribbon.PageHeaderItemLinks.Add(this.btnKhoaUngDung);
@@ -256,11 +262,30 @@
             this.btnDonVi.Name = "btnDonVi";
             this.btnDonVi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDonVi_ItemClick);
             // 
+            // btnNhapTuExcel
+            // 
+            this.btnNhapTuExcel.Caption = "Nhập từ Excel";
+            this.btnNhapTuExcel.Glyph = ((System.Drawing.Image)(resources.GetObject("btnNhapTuExcel.Glyph")));
+            this.btnNhapTuExcel.Id = 18;
+            this.btnNhapTuExcel.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnNhapTuExcel.LargeGlyph")));
+            this.btnNhapTuExcel.Name = "btnNhapTuExcel";
+            this.btnNhapTuExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhapTuExcel_ItemClick);
+            // 
+            // btnChiDoan
+            // 
+            this.btnChiDoan.Caption = "Quản lý chi đoàn";
+            this.btnChiDoan.Glyph = ((System.Drawing.Image)(resources.GetObject("btnChiDoan.Glyph")));
+            this.btnChiDoan.Id = 19;
+            this.btnChiDoan.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnChiDoan.LargeGlyph")));
+            this.btnChiDoan.Name = "btnChiDoan";
+            this.btnChiDoan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnChiDoan_ItemClick);
+            // 
             // rpHeThong
             // 
             this.rpHeThong.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.rpgGiaoDien,
             this.ribbonPageGroup3,
+            this.ribbonPageGroup4,
             this.rpgTienIch,
             this.rpgNguoiDung});
             this.rpHeThong.Name = "rpHeThong";
@@ -312,6 +337,7 @@
             // 
             this.ribbonPageGroup1.AllowTextClipping = false;
             this.ribbonPageGroup1.ItemLinks.Add(this.btnDonVi);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnChiDoan);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnNhanSu);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.ShowCaptionButton = false;
@@ -366,14 +392,22 @@
             this.IMC.InsertGalleryImage("usergroup_16x16.png", "images/people/usergroup_16x16.png", DevExpress.Images.ImageResourceCache.Default.GetImage("images/people/usergroup_16x16.png"), 3);
             this.IMC.Images.SetKeyName(3, "usergroup_16x16.png");
             // 
-            // btnNhapTuExcel
+            // ribbonPageGroup4
             // 
-            this.btnNhapTuExcel.Caption = "Nhập từ Excel";
-            this.btnNhapTuExcel.Glyph = ((System.Drawing.Image)(resources.GetObject("btnNhapTuExcel.Glyph")));
-            this.btnNhapTuExcel.Id = 18;
-            this.btnNhapTuExcel.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnNhapTuExcel.LargeGlyph")));
-            this.btnNhapTuExcel.Name = "btnNhapTuExcel";
-            this.btnNhapTuExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhapTuExcel_ItemClick);
+            this.ribbonPageGroup4.AllowTextClipping = false;
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnNienKhoa);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.ShowCaptionButton = false;
+            this.ribbonPageGroup4.Text = "Cấu hình";
+            // 
+            // btnNienKhoa
+            // 
+            this.btnNienKhoa.Caption = "Niên khóa";
+            this.btnNienKhoa.Glyph = ((System.Drawing.Image)(resources.GetObject("btnNienKhoa.Glyph")));
+            this.btnNienKhoa.Id = 20;
+            this.btnNienKhoa.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnNienKhoa.LargeGlyph")));
+            this.btnNienKhoa.Name = "btnNienKhoa";
+            this.btnNienKhoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNienKhoa_ItemClick);
             // 
             // FrmTrangChu
             // 
@@ -435,6 +469,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem btnDonVi;
         private DevExpress.XtraBars.BarButtonItem btnNhapTuExcel;
+        private DevExpress.XtraBars.BarButtonItem btnChiDoan;
+        private DevExpress.XtraBars.BarButtonItem btnNienKhoa;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
     }
 }
 
